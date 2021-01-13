@@ -8,9 +8,9 @@ class Profile extends Component {
     render() {
         return <>
             <div className="Profile">
-                <Bio />
-                <Skills />
-                <SocialProfile />
+                <Bio name='Saifullah' />
+                <Skills skillA='React' skillB='Express' skillC='MongoDB'/>
+                <SocialProfile linkA='Facebook' linkB='Twitter'/>
             </div>
         </>
     }
