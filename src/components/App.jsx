@@ -13,9 +13,6 @@ class App extends Component {
                 </p>
                     
                 <Profile />
-                <MyProps name='Saifullah Saif'/>
-                <MyProps name='Fahim Al Munayem'/>
-                <MyProps name='Sakib Al Hasan'/>
             </div>
         </>
     }
