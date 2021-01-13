@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Profile from './profile/Profile'
+import MyProps from './Props/MyProps'
 
 class App extends Component {
     render() {
@@ -12,6 +13,9 @@ class App extends Component {
                 </p>
                     
                 <Profile />
+                <MyProps name='Saifullah Saif'/>
+                <MyProps name='Fahim Al Munayem'/>
+                <MyProps name='Sakib Al Hasan'/>
             </div>
         </>
     }
