@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Name = () => (
+const Bio = () => (
     <div className="Bio">
         <h1>Saifullah Saif</h1>
     </div>
