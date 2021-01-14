@@ -2,9 +2,14 @@
     width: 1200px;
     margin: auto;
 }
-
+.Users {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-flow: row;
+}
 .Profile {
-    width: 350px;
+    width: 380px;
     height: auto;
     padding: 5px 20px;
     border: 1px solid rgba(0, 0, 0, .3);
