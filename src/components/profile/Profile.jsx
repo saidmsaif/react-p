@@ -29,7 +29,11 @@ class Profile extends Component {
                 <h2>I'm counting - {this.state.count}</h2>
                 <button
                     onClick={() => {
-                        this.setState({count: this.state.count + 1})
+                        this.setState(() => {
+                            return { count: this.state.count + 1 }
+                        }, () => {
+                            console.log(this.state.count);
+                        })
                     }}
                 >Add ++</button>
             </Child>
