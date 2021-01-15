@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import './App.css'
 // import Profile from './profile/Profile'
 // import MyProps from './Props/MyProps'
+const Btn = {
+    background: 'red',
+    padding: '5px 10px',
+    color: 'white',
+    cursor: 'pointer'
+}
 
 class App extends Component {
     state = {
@@ -67,7 +73,7 @@ class App extends Component {
                 <br />
                 <button onClick={this.startTimer}>Start</button>
                 <button onClick={this.stopTimer}>Stop</button>
-                <button onClick={this.resetTimer}>Reset</button>
+                <button style={Btn} onClick={this.resetTimer}>Reset</button>
             </div>
         </>
     }
