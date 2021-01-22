@@ -14,6 +14,17 @@ export default class New extends Component {
         this.setState({name: event.target.value})
     }
 
+    handleFocus = event => {
+        console.log("I'm Focused");
+    }
+
+    handleBlur = event => {
+        if (!this.state.name) {
+            alert('Please enter your name')
+        }
+        console.log('I am blur event');
+    }
+
     render() {
         return (
             <div className={classes.Container}>
@@ -30,8 +41,10 @@ export default class New extends Component {
                     type="text"
                     placeholder='Input some text'
                     onChange={this.showText}
+                    onFocus={this.handleFocus}
+                    onBlur={this.handleBlur}
                 />
-                <h3>Welcome, {this.state.name}</h3>
+                {this.state.name && <h3>Welcome, {this.state.name}</h3>}
             </div>
         )
     }
