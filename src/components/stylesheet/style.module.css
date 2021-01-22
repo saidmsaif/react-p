@@ -10,3 +10,13 @@
     letter-spacing: 4px;
     border-radius: 3px;
 }
+
+.Container {
+    width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+input {
+    width: 100%;
+}
