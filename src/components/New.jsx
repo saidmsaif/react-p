@@ -2,8 +2,16 @@ import React, { Component } from 'react'
 import classes from './stylesheet/style.module.css'
 
 export default class New extends Component {
+    state = {
+        name: ''
+    }
+
     handleButtonclick = (event) => {
         console.log(event.target);
+    }
+
+    showText = (event) => {
+        this.setState({name: event.target.value})
     }
 
     render() {
@@ -18,7 +26,12 @@ export default class New extends Component {
 
                 <br /><br />
                 
-                <input type="text"/>
+                <input
+                    type="text"
+                    placeholder='Input some text'
+                    onChange={this.showText}
+                />
+                <h3>Welcome, {this.state.name}</h3>
             </div>
         )
     }
