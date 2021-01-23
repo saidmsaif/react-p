@@ -10,19 +10,9 @@ export default class New extends Component {
         console.log(event.target);
     }
 
-    showText = (event) => {
-        this.setState({name: event.target.value})
-    }
-
-    handleFocus = event => {
-        console.log("I'm Focused");
-    }
-
-    handleBlur = event => {
-        if (!this.state.name) {
-            alert('Please enter your name')
-        }
-        console.log('I am blur event');
+    showText = () => {
+        const text = document.getElementById('text')
+        this.setState({name: text.value})
     }
 
     render() {
@@ -30,7 +20,7 @@ export default class New extends Component {
             <div className={classes.Container}>
                 <button
                     className={classes.button}
-                    onClick={this.handleButtonclick}
+                    onClick={this.showText}
                 >
                     Click Me
                 </button>
@@ -40,9 +30,8 @@ export default class New extends Component {
                 <input
                     type="text"
                     placeholder='Input some text'
-                    onChange={this.showText}
-                    onFocus={this.handleFocus}
-                    onBlur={this.handleBlur}
+                    id='text'
+                    onChange={this.changeText}
                 />
                 {this.state.name && <h3>Welcome, {this.state.name}</h3>}
             </div>
