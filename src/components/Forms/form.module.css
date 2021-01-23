@@ -1,0 +1,8 @@
+.Container {
+    width: 900px;
+    margin: auto;
+}
+
+hr {
+    color: rgba(0, 0, 0, .4);
+}
