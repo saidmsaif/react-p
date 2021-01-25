@@ -1,82 +1,32 @@
 import React, { Component } from 'react'
-import './App.css'
-// import Profile from './profile/Profile'
-// import MyProps from './Props/MyProps'
-const Btn = {
-    background: 'red',
-    padding: '5px 10px',
-    color: 'white',
-    cursor: 'pointer'
-}
+import id from './App.module.css'
+import { Card, Col, Container, Row } from 'react-bootstrap'
+import Form from './Forms/Form'
 
 class App extends Component {
-    state = {
-        count: 0,
-    }
-
-    intervalId = null
-
-    incrementCount = () => {
-        this.setState({
-            count: this.state.count + 1,
-        })
-    }
-
-    decrementCount = () => {
-        if (this.state.count > 0) {
-            this.setState({
-                count: this.state.count - 1,
-            })
-        }
-    }
-
-    startTimer = () => {
-        if (this.state.count > 0) {
-            this.intervalId = setInterval(() => {
-                this.setState({ count: this.state.count + 1 }, () => {
-                        if (this.state.count === 10) {
-                            alert('Timer Finished')
-                            clearInterval(this.intervalId)
-                            this.intervalId = null
-                        }
-                })
-            }, 1000)
-        }
-    }
-
-    stopTimer = () => {
-        if (this.intervalId) {
-            clearInterval(this.intervalId)
-            this.intervalId = null
-        }
-    }
-
-    resetTimer = () => {
-        this.setState({ count: 0 })
-        clearInterval(this.intervalId)
-        this.intervalId = null
-    }
-
     render() {
         return <>
-            <div className="App-Container">
-                <h1>React Timer</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex temporibus totam quod cupiditate voluptatem laborum blanditiis, quia ducimus quae odit provident enim eligendi soluta labore eum adipisci earum odio.
+            <div className="jumbotron jumbotron-fluid text-light text-center" id={id.Jumbo_BG}>
+                <h1
+                    className='display-4 d-inline'
+                    id={id.pageHeading}
+                >
+                    Working with React Form
+                </h1>
+                <p className='w-50 mx-auto mt-3'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio impedit, dolore earum numquam labore exercitationem excepturi. Magnam commodi quos mollitia reiciendis tempora? Doloribus, tempore nam. Ipsum magnam cum id dolorum?
                 </p>
-                    
-                {/* <Profile /> */}
-
-                <button onClick={this.decrementCount}>-</button>
-                <span>{this.state.count}</span>
-                <button onClick={this.incrementCount}>+</button>
-                <br />
-                <button onClick={this.startTimer}>Start</button>
-                <button onClick={this.stopTimer}>Stop</button>
-                <button style={Btn} onClick={this.resetTimer}>Reset</button>
             </div>
+
+            <Container>
+                <Row>
+                    <Col className='border p-5'>
+                        <Form />
+                    </Col>
+                </Row>
+            </Container>
         </>
     }
 }
 
-export default App 
+export default App
