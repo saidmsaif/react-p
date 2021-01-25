@@ -52,7 +52,7 @@ export default class Form extends Component {
                             </div>
                         </Col>
                     </Row>
-
+                    
                     <Row>
                         <Col>
                             <div className="form-group">
