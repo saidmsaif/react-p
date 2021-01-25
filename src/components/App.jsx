@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import id from './App.module.css'
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import Form from './Forms/Form'
 
 class App extends Component {
@@ -18,6 +18,8 @@ class App extends Component {
                 </p>
             </div>
 
+            {/* Main Container Area */}
+            
             <Container>
                 <Row>
                     <Col className='border p-5'>
@@ -25,6 +27,21 @@ class App extends Component {
                     </Col>
                 </Row>
             </Container>
+
+            {/* Main Container Area */}
+
+            <div className="copyright mt-4" id={id.copyright}>
+                <Container className='text-light'>
+                    <Row>
+                        <Col>
+                            <p className='mt-3'>
+                                Copyright © Saifullah Saif | All Right Reserved
+                            </p>
+                        </Col>
+                        <Col></Col>
+                    </Row>
+                </Container>
+            </div>
         </>
     }
 }
