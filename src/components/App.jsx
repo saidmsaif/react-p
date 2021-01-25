@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import id from './App.module.css'
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import Form from './Forms/Form'
 
 class App extends Component {
