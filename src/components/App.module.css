@@ -5,3 +5,8 @@
 #pageHeading {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+#copyright {
+    background: linear-gradient( #4798C4, #1D607A);
+    height: 60px;
+}
