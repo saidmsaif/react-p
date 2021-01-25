@@ -9,7 +9,7 @@ export default class Form extends Component {
         birthday: '',
         message: ''
     };
-
+    
     handleChange = event => {
         this.setState = ({
             [event.target.name]: event.target.value
@@ -17,7 +17,7 @@ export default class Form extends Component {
     };
 
     render() {
-        const { name } = this.state;
+        const { name, country, birthday, message } = this.state;
 
         return (
             <div className=''>
@@ -41,7 +41,7 @@ export default class Form extends Component {
                         <Col>
                             <div className="form-group">
                                 <label htmlFor="country">Select your country : </label>
-                                <select name="country" id="" className='form-control' onChange={this.handleChange}>
+                                <select name="country" id="" className='form-control' onChange={this.handleChange} value={country}>
                                     <option>Select Your Country</option>
                                     <option value="bd">Bangladesh</option>
                                     <option value="it">Italy</option>
@@ -57,7 +57,7 @@ export default class Form extends Component {
                         <Col>
                             <div className="form-group">
                                 <label htmlFor="birthday">Birthday : </label>
-                                <input type="date" name="birthday" id="" className='form-control' onChange={this.handleChange}/>
+                                <input type="date" name="birthday" id="" className='form-control' onChange={this.handleChange} value={birthday}/>
                             </div>
                         </Col>
                     </Row>
@@ -65,7 +65,7 @@ export default class Form extends Component {
                     <Row>
                         <Col>
                             <label htmlFor="message">Your Message :</label>
-                            <textarea name="message" id="" className='form-control' onChange={this.handleChange}></textarea>
+                            <textarea name="message" id="" className='form-control' onChange={this.handleChange} value={message}></textarea>
                         </Col>
                     </Row>
 
