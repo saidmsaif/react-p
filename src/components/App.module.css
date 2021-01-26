@@ -1,12 +1,12 @@
-#Jumbo_BG {
+.Jumbo_BG {
     background: linear-gradient(#1D607A, #4798C4);
 }
 
-#pageHeading {
+.pageHeading {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-#copyright {
+.copyright {
     background: linear-gradient( #4798C4, #1D607A);
     height: 60px;
 }
