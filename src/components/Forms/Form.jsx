@@ -11,7 +11,7 @@ export default class Form extends Component {
     };
     
     handleChange = event => {
-        this.setState = ({
+        this.setState({
             [event.target.name]: event.target.value
         })
     };
