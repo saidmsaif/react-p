@@ -11,7 +11,7 @@ export default class Form extends Component {
     };
     
     handleChange = event => {
-        this.setState = ({
+        this.setState({
             [event.target.name]: event.target.value
         })
     };
@@ -65,7 +65,7 @@ export default class Form extends Component {
                     <Row>
                         <Col>
                             <label htmlFor="message">Your Message :</label>
-                            <textarea name="message" id="" className='form-control' onChange={this.handleChange}></textarea>
+                            <textarea name="message" id="" className='form-control' onChange={this.handleChange} value={message}></textarea>
                         </Col>
                     </Row>
 
@@ -76,7 +76,7 @@ export default class Form extends Component {
                                     console.log(this.state);
                                 }}>
                                     click me </button>
-                                <input type="reset" value="Reset" className='btn btn-danger'/>
+                                <input type="submit" value="Submit" className='btn btn-danger'/>
                             </div>
                         </Col>
                     </Row>
