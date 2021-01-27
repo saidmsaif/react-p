@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import classes from "./App.module.css";
 import { Col, Container, Row } from 'react-bootstrap'
-import Form from './Forms/Form'
-import UncontrolledForm from './Forms/uncontrolledForm';
+// import Form from './Forms/Form'
+// import UncontrolledForm from './Forms/uncontrolledForm';
 import ControlledForm from './Forms/SplitForms/Index';
 
 class App extends Component {
