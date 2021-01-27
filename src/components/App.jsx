@@ -3,6 +3,7 @@ import classes from "./App.module.css";
 import { Col, Container, Row } from 'react-bootstrap'
 import Form from './Forms/Form'
 import UncontrolledForm from './Forms/uncontrolledForm';
+import ControlledForm from './Forms/SplitForms/Index';
 
 class App extends Component {
     render() {
@@ -29,11 +30,12 @@ class App extends Component {
 					<Row>
 						<Col className='border p-5'>
 							{/* <Form /> */}
-							<UncontrolledForm />
+							{/* <UncontrolledForm /> */}
+							<ControlledForm />
 						</Col>
 					</Row>
 				</Container>
-
+				
 				{/* Main Container Area */}
 
 				<div className={`${classes.copyright} copyright mt-4`}>
