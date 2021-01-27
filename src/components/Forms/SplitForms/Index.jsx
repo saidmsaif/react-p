@@ -1,6 +1,22 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types'
 import { Container, Row, Col } from "react-bootstrap";
 import classes from "../form.module.css";
+
+const TestForm = props => (
+    <div className='form-group'>
+        <label htmlFor={props.name}>{props.label}</label>
+
+        <input type={props.type} name={props.name} value={props.value} placeholder={props.placeholder} className='form-control' id={props.name} />
+    </div>
+);
+
+TestForm.propTypes = {
+    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
+};
 
 class ControlledForm extends Component {
 	state = {
@@ -10,7 +26,7 @@ class ControlledForm extends Component {
 	};
 
 	handleSubmit = (event) => {
-		
+		event.preventDefault();
 		this.setState({
 			name: event.target.name.value,
 			email: event.target.email.value,
@@ -28,15 +44,17 @@ class ControlledForm extends Component {
 						<Col sm={7}>
 							<form onSubmit={this.handleSubmit}>
 								<div className='form-group'>
-									<input
+									<TestForm
+										label='Name :'
 										type='text'
 										name='name'
 										className='form-control'
-										id=''
+										id='name'
 										placeholder='Enter your name...'
 									/>
 
-									<input
+									<TestForm
+										label='Email :'
 										type='email'
 										name='email'
 										className='form-control mt-2'
@@ -44,7 +62,8 @@ class ControlledForm extends Component {
 										placeholder='Enter your email...'
 									/>
 
-									<input
+									<TestForm
+										label='Password :'
 										type='password'
 										name='pass'
 										className='form-control mt-2'
