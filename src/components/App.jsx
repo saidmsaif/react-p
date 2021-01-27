@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import classes from "./App.module.css";
-import id from "./App.module.css"; 
 import { Col, Container, Row } from 'react-bootstrap'
 import Form from './Forms/Form'
+import UncontrolledForm from './Forms/uncontrolledForm';
 
 class App extends Component {
     render() {
@@ -28,7 +28,8 @@ class App extends Component {
 				<Container>
 					<Row>
 						<Col className='border p-5'>
-							<Form />
+							{/* <Form /> */}
+							<UncontrolledForm />
 						</Col>
 					</Row>
 				</Container>
