@@ -6,24 +6,28 @@ export default class Index extends Component {
 		students: [
 			{
 				id: "1949CSE00761",
+				thumb: "logo192.png",
 				name: "Saif",
 				varsity: "MIU",
 			},
 
 			{
 				id: "1949CSE00789",
+				thumb: "logo192.png",
 				name: "Sajib",
 				varsity: "MIU",
 			},
 
 			{
 				id: "1949CSE00796",
+				thumb: "logo192.png",
 				name: "Shanto",
 				varsity: "MIU",
 			},
 
 			{
 				id: "1949CSE00***",
+				thumb: "logo192.png",
 				name: "Dingdong",
 				varsity: "MIU",
 			},
@@ -35,7 +39,12 @@ export default class Index extends Component {
 			return (
 				<div className='col-12'>
 					<Media>
-						<img src='' alt='' width={64} height={64} />
+						<img
+							src={studentData.thumb}
+							alt=''
+							width={64}
+							height={64}
+						/>
 						<Media.Body className='ml-3'>
 							<h3>{studentData.name}</h3>
 							<p>{studentData.id}</p>
