@@ -9,19 +9,16 @@ export default class Index extends Component {
 				name: "Saif",
 				varsity: "MIU",
 			},
-
 			{
 				id: "1949CSE00789",
 				name: "Sajib",
 				varsity: "MIU",
 			},
-
 			{
 				id: "1949CSE00796",
 				name: "Shanto",
 				varsity: "MIU",
 			},
-
 			{
 				id: "1949CSE00***",
 				name: "Dingdong",
