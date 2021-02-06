@@ -33,7 +33,7 @@ class App extends Component {
 							{/* <Form /> */}
 							{/* <UncontrolledForm /> */}
 							{/* <ControlledForm /> */}
-							{/* <Index /> */}
+							<Index />
 						</Col>
 					</Row>
 				</Container>
