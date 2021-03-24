@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './components/App'
+import {newsCategory} from './news'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App category={newsCategory.technology} />
   </React.StrictMode>,
   document.getElementById('root')
 );
