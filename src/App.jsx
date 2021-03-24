@@ -3,21 +3,45 @@ import classes from "./App.module.css";
 import { Col, Container, Row } from 'react-bootstrap'
 import Blog from './components/blog/blog'
 import { newsCategory } from './news'
+import NewsLink from './components/blog/NewsList'
+
+const fakeNews = [
+  {
+    title: 'This is title one',
+    featuredImage: '',
+    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    link: 'https://www.mylink.com',
+    linkToImage: 'https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg',
+    publishedTime: 'Published at - Time : Date',
+    source: {
+      name: 'CNN'
+    }
+  },
+  {
+    title: 'This is title two',
+    featuredImage: '',
+    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    link: 'https://www.mylink.com',
+    linkToImage: 'https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg',
+    publishedTime: 'Published at - Time : Date',
+    source: {
+      name: 'BBC'
+    }
+  },
+  {
+    title: 'This is title two',
+    featuredImage: '',
+    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+    link: 'https://www.mylink.com',
+    linkToImage: 'https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg',
+    publishedTime: 'Published at - Time : Date',
+    source: {
+      name: 'BBC'
+    }
+  }
+]
 
 class App extends Component {
-	state = {
-		searchTerm: ""
-	}
-
-	onChangeHandler = e => {
-		// TODO: Implement Later
-		this.setState({ searchTerm: e.target.value})
-	}
-
-	onKeyPressHandler = e => {
-		// TODO: Implement Later
-
-	}
 
     render() {
         return (
@@ -48,6 +72,12 @@ class App extends Component {
 				{/* Main Container Area */}
 
 				<Blog category={newsCategory.business} />
+        <Container>
+          
+            <Row className='border mt-3'>
+              <NewsLink news={fakeNews}/>
+            </Row>
+        </Container>
 				
 				{/* Main Container Area */}
 
