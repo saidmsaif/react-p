@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Blog from './components/blog/blog'
 import { newsCategory } from './news'
 import NewsLink from './components/blog/NewsList'
+import Pagination from './components/blog/Pagination';
 
 const fakeNews = [
   {
@@ -73,9 +74,14 @@ class App extends Component {
 
 				<Blog category={newsCategory.business} />
         <Container>
-          
             <Row className='border mt-3'>
               <NewsLink news={fakeNews}/>
+            </Row>
+        </Container>
+
+        <Container>
+        <Row className='border mt-3'>
+              <Pagination></Pagination>
             </Row>
         </Container>
 				
