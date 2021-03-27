@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap'
 const NewsItem = ({item}) => (
   
   <Col xs={4}>
-      <div className='card m-2'>
+      <div className='card my-3'>
         {item.linkToImage && (
           <img 
             className='card-img-top' 

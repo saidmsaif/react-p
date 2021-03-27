@@ -25,7 +25,7 @@ class App extends Component {
 
 				<Container>
 					<Row>
-						<Col className='border p-5'>
+						<Col className='border pt-3'>
 							<input type="search"
 							className="form-control mb-2"
 								placeholder="Type anything and press enter..." 
@@ -33,21 +33,23 @@ class App extends Component {
 								onChange={this.onChangeHandler}
 								onKeyPress={this.onKeyPressHandler}
 							/>
-							{newsCategory && Object.keys(newsCategory).map(item => {
-								if(category === newsCategory[item]) {
-									return (
-										<button className='btn btn-sm mr-2 mb-2 btn-warning'>
-											{`#${newsCategory[item]}`}
-										</button>
-									)
-								} else {
-									return (
-										<button className='btn btn-sm mr-2 mb-2 btn-light'>
-											{`#${newsCategory[item]}`}
-										</button>
-									)
-								}
-							})}
+							<div className="mt-2 mb-3">
+								{newsCategory && Object.keys(newsCategory).map(item => {
+									if(category === newsCategory[item]) {
+										return (
+											<button className='btn btn-sm mr-2 btn-warning'>
+												{`#${newsCategory[item]}`}
+											</button>
+										)
+									} else {
+										return (
+											<button className='btn btn-sm mr-2 btn-light'>
+												{`#${newsCategory[item]}`}
+											</button>
+										)
+									}
+								})}
+							</div>
 						</Col>
 					</Row>
 				</Container>

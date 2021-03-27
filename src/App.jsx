@@ -4,6 +4,8 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Blog from './components/blog/blog'
 import { newsCategory } from './news'
 import NewsLink from './components/blog/NewsList'
+import Pagination from './components/blog/Pagination';
+import Axios from 'axios'
 
 const fakeNews = [
   {
@@ -41,6 +43,12 @@ const fakeNews = [
   }
 ]
 
+const URL = 'http://jsonplaceholder.typicode.com/users'
+
+Axios.get(URL).then((res => {
+  console.log(res.data)
+}))
+
 class App extends Component {
 
     render() {
@@ -73,15 +81,19 @@ class App extends Component {
 
 				<Blog category={newsCategory.business} />
         <Container>
-          
             <Row className='border mt-3'>
-              <NewsLink news={fakeNews}/>
+              <NewsLink news={fakeNews} />
             </Row>
         </Container>
-				
+
+        <Container>
+            <Row className='border mt-3'>
+              <Pagination />
+            </Row>
+        </Container>
+
 				{/* Main Container Area */}
-
-
+        
         {
           // Footer Area Start
         }
