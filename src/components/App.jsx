@@ -1,66 +1,7 @@
-import React, { Component } from 'react'
-import classes from "./App.module.css";
-import { Col, Container, Row } from 'react-bootstrap'
-import Blog from './simple-blog/Index';
-// import Form from './Forms/Form' 
-// import UncontrolledForm from './Forms/uncontrolledForm';
-// import ControlledForm from './Forms/SplitForms/Index';
-// import Index from './media/Index';
+import React from 'react'
 
-
-
-class App extends Component {
-    render() {
-        return (
-			<>
-				<div
-					className={`${classes.Jumbo_BG} jumbotron jumbotron-fluid text-light text-center`}
-				>
-					<h1 className={`${classes.pageHeading} display-4 d-inline`}>
-						Working with React Form
-					</h1>
-					<p className='w-50 mx-auto mt-3'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Optio impedit, dolore earum numquam labore
-						exercitationem excepturi. Magnam commodi quos mollitia
-						reiciendis tempora? Doloribus, tempore nam. Ipsum magnam
-						cum id dolorum?
-					</p>
-				</div>
-
-				{/* Main Container Area */}
-
-				<Container>
-					<Row>
-						<Col className='border p-5'>
-							{/* <Form /> */}
-							{/* <UncontrolledForm /> */}
-							{/* <ControlledForm /> */}
-							{/* <Index /> */}
-							
-							<Blog />
-						</Col>
-					</Row>
-				</Container>
-				
-				{/* Main Container Area */}
-
-				<div className={`${classes.copyright} copyright mt-4`}>
-					<Container className='text-light'>
-						<Row>
-							<Col>
-								<p className='mt-3'>
-									Copyright © Saifullah Saif | All Right
-									Reserved
-								</p>
-							</Col>
-							<Col></Col>
-						</Row>
-					</Container>
-				</div>
-			</>
-		);
-    }
+const myFunction = () => {
+    return <h1>This is a app</h1>
 }
 
-export default App
+export default myFunction
