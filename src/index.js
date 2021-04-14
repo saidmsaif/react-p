@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
-=======
-import reportWebVitals from './reportWebVitals';
-import App from './components/App'
 import './index.css'
->>>>>>> new
 import 'bootstrap/dist/css/bootstrap.min.css'
-import App from './App/App'
+import App from './components/App'
 
 ReactDOM.render(
   <App />,

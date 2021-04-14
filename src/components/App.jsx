@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const myFunction = () => {
-    return <h1 className='font-medium'>This is a app</h1>
+class App extends Component {
+    render() {
+        return <>
+            <h1>This is a text</h1>
+            </>
+    }
 }
 
-export default myFunction
+export default App
