@@ -28,6 +28,12 @@ export default class Index extends Component {
 				name: "Dingdong",
 				varsity: "MIU",
 			},
+			{
+				id: "1949CSE00764",
+				thumb: "logo192.png",
+				name: "Rifat Al Maruf",
+				varsity: "MIU",
+			},
 		],
 	};
 

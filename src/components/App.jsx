@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import classes from "./App.module.css";
 import { Col, Container, Row } from 'react-bootstrap'
+import Blog from './simple-blog/Index';
 // import Form from './Forms/Form' 
 // import UncontrolledForm from './Forms/uncontrolledForm';
-import ControlledForm from './Forms/SplitForms/Index';
-import Index from './media/Index';
+// import ControlledForm from './Forms/SplitForms/Index';
+// import Index from './media/Index';
+
+
 
 class App extends Component {
     render() {
@@ -33,7 +36,9 @@ class App extends Component {
 							{/* <Form /> */}
 							{/* <UncontrolledForm /> */}
 							{/* <ControlledForm /> */}
-							<Index />
+							{/* <Index /> */}
+							
+							<Blog />
 						</Col>
 					</Row>
 				</Container>
